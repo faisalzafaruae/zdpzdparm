@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "uksouth"
+            "value": "westeurope"
         },
         "virtualMachineName": {
             "value": "ZDP-50"
@@ -24,7 +24,7 @@
             "value": "ZDP-50-nsg"
         },
         "adminPassword": {
-            "value": null
+            "value": "Dubai@202092"
         },
         "diagnosticsStorageAccountName": {
             "value": "zdp50demodiag297"
