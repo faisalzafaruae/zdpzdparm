@@ -113,6 +113,7 @@ fi
 echo "Starting deployment..."
 (
 	set -x
+	az vm image accept-terms --urn hortonworks:hortonworks-sandbox:sandbox26:2.6.4
 	az group deployment create --name "$deploymentName" --resource-group "$resourceGroupName" --template-file "$templateFilePath" --parameters "@${parametersFilePath}"
 )
 
