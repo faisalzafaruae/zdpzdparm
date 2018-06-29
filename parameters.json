@@ -1,0 +1,57 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "uksouth"
+        },
+        "virtualMachineName": {
+            "value": "ZDP-50"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS13-4_v2"
+        },
+        "adminUsername": {
+            "value": "zaloni"
+        },
+        "virtualNetworkName": {
+            "value": "ZDP50Demo-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "zdp-50222"
+        },
+        "networkSecurityGroupName": {
+            "value": "ZDP-50-nsg"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "zdp50demodiag297"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/zdp50demodiag297"
+        },
+        "addressPrefix": {
+            "value": "10.0.1.0/24"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.0.1.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "ZDP-50-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        }
+    }
+}
