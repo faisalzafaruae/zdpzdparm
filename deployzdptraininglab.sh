@@ -38,6 +38,7 @@ if [[ -z "$subscriptionId" ]]; then
 	echo "Enter your subscription ID:"
 	read subscriptionId
 	[[ "${subscriptionId:?}" ]]
+    echo "Installing on $subscriptionId" 
 fi
 
 if [[ -z "$resourceGroupName" ]]; then
@@ -46,6 +47,7 @@ if [[ -z "$resourceGroupName" ]]; then
 	echo "Enter a resource group name"
 	read resourceGroupName
 	[[ "${resourceGroupName:?}" ]]
+    echo "Installing on $resourceGroupName" 
 fi
 
 if [[ -z "$deploymentName" ]]; then
