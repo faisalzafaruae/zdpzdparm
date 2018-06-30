@@ -106,6 +106,7 @@ if [ $? != 0 ]; then
 		az group create --name $resourceGroupName --location $resourceGroupLocation 1> /dev/null
 	)
 	else
+	az group create --name $resourceGroupName --location $resourceGroupLocation 1> /dev/null
 	echo "Using existing resource group..."
 fi
 
