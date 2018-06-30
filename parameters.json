@@ -6,7 +6,7 @@
             "value": "westeurope"
         },
         "resourceGroup": {
-            "value": "HdpZdp"
+            "value": "ZDPTRAINING"
         },
         "virtualMachineName": {
             "value": "zdphost"
