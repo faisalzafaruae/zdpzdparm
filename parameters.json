@@ -5,6 +5,9 @@
         "location": {
             "value": "westeurope"
         },
+        "resourceGroup": {
+            "value": "HdpZdp"
+        },
         "virtualMachineName": {
             "value": "zdphost"
         },
