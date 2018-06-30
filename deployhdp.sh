@@ -8,9 +8,9 @@ IFS=$'\n\t'
 
 usage() { echo "Usage: $0 -i <subscriptionId> -g <resourceGroupName> -n <deploymentName> -l <resourceGroupLocation>" 1>&2; exit 1; }
 
-declare subscriptionId="43033ce6-997b-40c1-aa6b-546d73b7c8e7"
+declare subscriptionId=""
 declare resourceGroupName="zdptraining"
-declare deploymentName="bedrock"
+declare deploymentName="deployzdpsandbox"
 declare resourceGroupLocation="West Europe"
 
 # Initialize parameters specified from command line
