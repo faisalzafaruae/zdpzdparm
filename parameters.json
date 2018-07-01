@@ -30,7 +30,7 @@
             "value": "Dubai@202092"
         },
         "diagnosticsStorageAccountName": {
-            "value": "zdp50demodiag297"
+            "value": "[concat( 'zdp50demodiag297', uniqueString(resourceGroup().id) )]"
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
