@@ -116,7 +116,7 @@
             }
         },
         {
-            "name": "[parameters('diagnosticsStorageAccountName')]",
+            "name": "[concat( parameters('diagnosticsStorageAccountName'), uniqueString(resourceGroup().id) )]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2015-06-15",
             "location": "[parameters('location')]",
