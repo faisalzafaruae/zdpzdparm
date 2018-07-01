@@ -59,7 +59,8 @@
     },
     "variables": {
         "vnetId": "[resourceId(parameters('resourceGroup'),'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
-        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
+        "storageUniqueName": "[toLower( concat( parameters('diagnosticsStorageAccountName'), uniqueString(resourceGroup().id) ) )]"
     },
     "resources": [
         {
@@ -69,7 +70,7 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]",
-                "[concat('Microsoft.Storage/storageAccounts/', parameters('diagnosticsStorageAccountName'))]"
+                "[concat('Microsoft.Storage/storageAccounts/', variables('storageUniqueName'))]"
             ],
             "properties": {
                 "osProfile": {
@@ -105,7 +106,7 @@
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true,
-                        "storageUri": "[reference(resourceId(parameters('resourceGroup'), 'Microsoft.Storage/storageAccounts', parameters('diagnosticsStorageAccountName')), '2015-06-15').primaryEndpoints['blob']]"
+                        "storageUri": "[reference(resourceId(parameters('resourceGroup'), 'Microsoft.Storage/storageAccounts', variables('storageUniqueName')), '2015-06-15').primaryEndpoints['blob']]"
                     }
                 }
             },
@@ -116,7 +117,7 @@
             }
         },
         {
-            "name": "[parameters('diagnosticsStorageAccountName')]",
+            "name": "[variables('storageUniqueName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2015-06-15",
             "location": "[parameters('location')]",
