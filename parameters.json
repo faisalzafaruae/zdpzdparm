@@ -9,7 +9,7 @@
             "value": "zdptraining"
         },
         "virtualMachineName": {
-            "value": "zdphost"
+            "value": "zdp-gateway"
         },
         "virtualMachineSize": {
             "value": "Standard_DS13-4_v2"
